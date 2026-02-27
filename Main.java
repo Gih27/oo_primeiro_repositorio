@@ -1,44 +1,40 @@
-import java.util.Scanner;
+public class Main{  
+    public static void main (String[] arg){
 
-public class Main{
+        int mesa = 0;
 
-    public static void main(String[] args) {
+        // ordenação 
+        // entrada
+        // [7,6,4,3,2]
+        int[] vetor = {7,6,4,3,2};
 
-        /*Scanner scan = new Scanner(System.in);
-
-        Boolean ehDeMaior = false;
-
-        System.out.println("");
-        System.out.println("Digite seu nome: ");
-        String nome = scan.next();
-
-        System.out.println("");
-        System.out.println("Digite sua Altura: ");
-        double altura = scan.nextDouble();
-       
-        System.out.println("");
-        System.out.println("Digite sua Idade: ");
-        int idade = scan.nextInt();
-
-        System.out.println("");
-        System.out.println("Seu nome é: " + nome + ", sua altura é: " + altura + ", sua idade é: " + idade + " anos");
-        System.out.println("");
-
-        if(idade >= 18){
-            System.out.println("Vc É de maior :)");
+        System.out.println("Vetor antes: ");
+        System.out.println("[");
+        for(int a=0;a < 5 ;a++){
+            System.out.println(","+vetor[a]);
         }
-        else{
-            System.out.println("Vc É de menor :(");
-        }*/
+        System.out.println("]");
 
-    int[] vetor;
+        //saída 
+        //[2,3,4,6,7]
+        for(int a=0; a< 5 ;a++){
+            for(int b=1; b< 4; b++){
+                if(vetor[b] > vetor[b+1]){
+                    
+                    mesa = vetor[a];
+                    vetor[a]= vetor[b+1];
+                    vetor[b+1] = mesa;
 
-    vetor = new int[10];
+                }
+            }
+        }
 
-    for(int a = 0; a < 10; a++){
-        vetor[a] = a+1;
-        System.out.println("Valor do Vetor: "+ vetor[a] +"  Posição: "+ a);
-    }
+        System.out.println("Vetor depois: ");
+        System.out.println("[");
+        for(int a=0;a < 5 ;a++){
+            System.out.println(","+vetor[a]);
+        }
+        System.out.println("]");
 
     }
 }
