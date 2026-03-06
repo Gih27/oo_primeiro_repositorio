@@ -1,40 +1,15 @@
-public class Main{  
-    public static void main (String[] arg){
+import models.Cachorro;
 
-        int mesa = 0;
+public class Main {
+    public static void main(String[] args) {
 
-        // ordenação 
-        // entrada
-        // [7,6,4,3,2]
-        int[] vetor = {7,6,4,3,2};
+        Cachorro animal = new Cachorro("BOB",18,"Caramelo","OWLL OWLLL");
 
-        System.out.println("Vetor antes: ");
-        System.out.println("[");
-        for(int a=0;a < 5 ;a++){
-            System.out.println(","+vetor[a]);
-        }
-        System.out.println("]");
-
-        //saída 
-        //[2,3,4,6,7]
-        for(int a=0; a< 5 ;a++){
-            for(int b=1; b< 4; b++){
-                if(vetor[b] > vetor[b+1]){
-                    
-                    mesa = vetor[a];
-                    vetor[a]= vetor[b+1];
-                    vetor[b+1] = mesa;
-
-                }
-            }
-        }
-
-        System.out.println("Vetor depois: ");
-        System.out.println("[");
-        for(int a=0;a < 5 ;a++){
-            System.out.println(","+vetor[a]);
-        }
-        System.out.println("]");
+        Cachorro cachorro2 = new Cachorro("Cind",12, "preta", "OOOOUUUU");
+        System.out.println();
+        Cachorro cachorro3 = new Cachorro("Preto", "Caramelo");
+        System.out.println(cachorro3);
+        
 
     }
 }
