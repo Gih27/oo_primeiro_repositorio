@@ -1,4 +1,4 @@
-package models;
+package avt13_03;
 
 public class Cachorro {
     private String cor;
@@ -18,6 +18,7 @@ public class Cachorro {
     public void setNome(String nome){
         this.nome = nome; 
     }
+    
 
     public String getNome(){
         return this.nome;
@@ -58,6 +59,8 @@ public class Cachorro {
     public String toString(){
         return "nome: "+ this.nome + "\n" + this.cor;
     }
+
+    
 
 
 }

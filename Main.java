@@ -1,15 +1,24 @@
-import models.Cachorro;
+package avt13_03;
+import avt13_03.Cachorro;
+import avt13_03.Pessoa;
 
 public class Main {
-    public static void main(String[] args) {
+    
+    public static void main(String[] arg){
 
-        Cachorro animal = new Cachorro("BOB",18,"Caramelo","OWLL OWLLL");
+        Cachorro cachorro = new Cachorro("Tob",null, "Branco", null);
+        Cachorro cachorro2 = new Cachorro(null, null, null, null);
+        Cachorro cachorro3 = new Cachorro(null, null, null, null);
 
-        Cachorro cachorro2 = new Cachorro("Cind",12, "preta", "OOOOUUUU");
-        System.out.println();
-        Cachorro cachorro3 = new Cachorro("Preto", "Caramelo");
-        System.out.println(cachorro3);
-        
+        Pessoa pessoa = new Pessoa("Adryann", "xxxxxxx", 17);
+
+        pessoa.getCachorros().add(cachorro2);
+        pessoa.getCachorros().add(cachorro3);
+        pessoa.getCachorros().add(cachorro);
+
+        System.out.println("Teste isEmpy");
+        System.out.println(pessoa.getCachorros().isEmpty());
+        System.out.println(pessoa.getCachorros().size());
 
     }
 }
